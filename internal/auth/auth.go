@@ -4,6 +4,7 @@ import (
 	"errors"
 	"net/http"
 	"strings"
+	"testing"
 )
 
 var ErrNoAuthHeaderIncluded = errors.New("no authorization header included")
@@ -20,4 +21,11 @@ func GetAPIKey(headers http.Header) (string, error) {
 	}
 
 	return splitAuth[1], nil
+}
+
+
+func TestNote(t *testing.T) {
+	if 1 == 1 {
+		t.Fatalf("Big error")
+	}
 }
